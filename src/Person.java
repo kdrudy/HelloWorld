@@ -8,40 +8,29 @@ public class Person {
     private int age;
     private boolean isAlive;
 
-    public static String hair = "Brown";
-
     public Person() {
-        name = "Kyle";
     }
 
-    public Person(String n) {
-        if(isValidName(n)) {
-            name = n;
-        }
+    public Person(String name, int age, boolean isAlive) {
+        this.name = name;
+        this.age = age;
+        this.isAlive = isAlive;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String n) {
-        if(isValidName(n)) {
-            name = n;
-        }
-    }
-
-    public static boolean isValidName(String name) {
-        return name.contains(" ") && !name.isEmpty() && name.length() <= 20;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int a) {
-        if(a > 0 && a < 150) {
-            age = a;
-        }
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public boolean isAlive() {
